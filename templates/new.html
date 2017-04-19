@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie-edge">
+    <title>Blog Posts</title>
+    <link rel="stylesheet" type="text/css" href="C:/dev/blog/static/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="C:/dev/blog/static/styles/style.css">
+  </head>
+
+  <body>
+
+    <form action="{{ url_for('addrecord') }}" method="POST" onsubmit="return validateForm()">
+      <h3>We're working on a new post!</h3>
+      <p>Title</p>
+      <input id="titleInput" type="text" name='title'>
+      <br>
+      <p>Post</p>
+      <textarea id="postInput" name='post'></textarea>
+      <br>
+      <p>ID:</p>
+      <input name="id" />
+      <input type="submit" value="submit" />
+      <br>
+    </form>
+
+    <a href="/posts">Posts</a>
+    <br>
+
+    <div>
+    <h2>Latest posts</h2>
+    <ul id="post-list">
+    </ul>
+    </div>
+
+<script id="post-template" type="text/post-template">
+  <li>
+    <h3 class="title"></h3>
+    <h4 class="post"></h4>
+    Likes:<span class="likes"></span>
+    <br>
+    <button class="like-button">Like</button> 
+  </li>
+
+</script>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="/static/scripts/scripts.js"></script> 
+    <script src="/static/scripts/new.js"></script>
+  </body>
+</html>
