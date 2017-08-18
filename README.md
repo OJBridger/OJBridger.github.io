@@ -1,9 +1,5 @@
-"#OJbridger.github.io"
+# OJbridger.github.io
 
+Created using Lambaschool
 
-Readme Update:
-Blog created with information gathered from Lamdaschool minibootcamp
-Using Python, sqlite3, flask
-
-Readme Update:
-Test with cloning to desktop and updating
+Using Sqlite3, Flask and Python
